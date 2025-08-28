@@ -35,7 +35,7 @@ Designed to let barbers manage their schedules and customers book appointments e
 
 ### Services
 - Predefined barbershop services initialized at startup:
-- 
+  
 ---
 
 ## Tech Stack
