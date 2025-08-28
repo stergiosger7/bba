@@ -41,9 +41,9 @@ Designed to let barbers manage their schedules and customers book appointments e
 ## Tech Stack
 
 - **DTO Pattern**
-- **Rest Api**
+- **Rest API**
 - **Backend:** Spring Boot 3, Spring Data JPA, Hibernate  
-- **Security:** Spring Security 6, JWT  
+- **Security:** Spring Security 6, JWT 
 - **Database:** MySQL  
 - **Testing:** JUnit 5, Mockito  
 - **Build tool:** Maven  
@@ -70,12 +70,15 @@ Designed to let barbers manage their schedules and customers book appointments e
 - Barber dashboard with authenticated access.
 
 ## Tech Stack
-- React  
-- React Router – navigation & route protection  
-- Axios – API requests  
-- Bootstrap / React-Bootstrap – UI styling  
-- JWT authentication (token stored in `localStorage`)
-- Build Toolchain: Vite
+- **React** 
+- **React Router** – navigation & route protection
+- **React Hooks**
+- **Axios** – API requests  
+- **Bootstrap / React-Bootstrap** – UI styling  
+- **JWT authentication** (token stored in `localStorage`)
+- **Node.js & npm** – runtime & package manager for frontend dependencies
+- **IDE:** VS Code (IDE & extensions)
+- **Build Toolchain:** Vite
 
 ## Roadmap / Future Improvements
 
