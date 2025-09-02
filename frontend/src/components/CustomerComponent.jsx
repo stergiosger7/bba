@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Card, Button, Alert, Form, Row, Col } from 'react-bootstrap';
-import { getSelectedBarber, getSelectedDate, getSelectedTime, clearAppointmentData } from '../services/AppointmentService';
+import { getSelectedBarber, getSelectedDate, getSelectedTime, clearAppointmentData } from '../services/StorageService';
 import { createAppointmentAPICall } from '../services/AppointmentService';
 import { useNavigate } from 'react-router-dom';
 
@@ -17,7 +17,6 @@ const CustomerComponent = () => {
     phone: ''
   });
   const [selectedService, setSelectedService] = useState(null);
-  const [selectedDate, setSelectedDate] = useState(getSelectedDate());
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();

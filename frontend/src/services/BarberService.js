@@ -31,44 +31,12 @@ export const getBarberAppointmentsByDateAPICall = (date) =>
   barberApi.get(`/appointments/${date}`);
 
 export const deleteBarberAPICall = (barberId) => {
-  return axios.delete(
-    `${BARBER_REST_API_BASE_URL}/${barberId}`, 
-    {
-      headers: {
-        'Authorization': `${localStorage.getItem('barberToken')}`,
-        'Content-Type': 'application/json'
-      }
-    }
-  );
+  return barberApi.delete(`/${barberId}`
+    );
 };
 
 // Close day for current barber
 export const closeDayAPICall = (date) =>
   barberApi.post("/close-day", null, { params: { date } });
 
-// Barber storage functions (same pattern as your appointment service)
-export const storeSelectedBarber = (barber) => 
-  sessionStorage.setItem("selectedBarber", JSON.stringify(barber));
 
-export const getSelectedBarber = () => {
-  const barber = sessionStorage.getItem("selectedBarber");
-  return barber ? JSON.parse(barber) : null;
-}
-
-export const storeSelectedDate = (date) => 
-  sessionStorage.setItem("selectedDate", date);
-
-export const getSelectedDate = () => 
-  sessionStorage.getItem("selectedDate");
-
-export const storeSelectedTime = (time) => 
-  sessionStorage.setItem("selectedTime", time);
-
-export const getSelectedTime = () => 
-  sessionStorage.getItem("selectedTime");
-
-export const clearAppointmentData = () => {
-  sessionStorage.removeItem("selectedBarber");
-  sessionStorage.removeItem("selectedDate");
-  sessionStorage.removeItem("selectedTime");
-}

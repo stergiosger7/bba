@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button, Alert, Row, Col, Badge } from 'react-bootstrap';
-import { storeSelectedBarber } from '../services/AppointmentService';
+import { storeSelectedBarber } from '../services/StorageService';
 import { getAllBarbersAPICall } from '../services/BarberService';
 import { useNavigate } from 'react-router-dom';
 
