@@ -3,7 +3,7 @@ import { Card, Button, Alert, Table, Navbar, Nav, Container } from 'react-bootst
 import { getCurrentBarberAPICall, getBarberAppointmentsByDateAPICall, getAllBarbersAPICall, deleteBarberAPICall } from '../services/BarberService';
 import { getAvailableDatesAPICall, confirmAppointmentAPICall, deleteAppointmentAPICall } from '../services/AppointmentService'; 
 import { useNavigate } from 'react-router-dom';
-import { isAdminBarber, isUserLoggedIn, logout } from '../services/AuthService';
+import { isAdminBarber, logout } from '../services/AuthService';
 
 const BarberDashboard = () => {
   const [availableDates, setAvailableDates] = useState([]);
@@ -14,7 +14,6 @@ const BarberDashboard = () => {
   const [currentMonth, setCurrentMonth] = useState(new Date().toISOString().slice(0, 7));
   const [showStaffManagement, setShowStaffManagement] = useState(false);
   const navigate = useNavigate();
-  const isBarberLoggedIn = isUserLoggedIn();
   const isAdmin = isAdminBarber();
 
   useEffect(() => {
