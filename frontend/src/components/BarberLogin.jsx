@@ -9,11 +9,33 @@ const BarberLogin = () => {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  async function handleLoginForm(e){
+
+  /** 
+    async function handleLoginForm(e){
+
+        e.preventDefault();
+        try {
+          const response = await loginAPICall(usernameOrPhone, password);
+          console.log('Login response:' ,response.data);
+
+          if (!response.data?.accessToken) {
+            throw new Error('No access token received');
+          }
+          if (!response.data?.role) {
+            throw new Error('No role received');
+          }
+            ....
+          }catch (error) {
+          setError("Invalid username or password!")
+          console.error(error);
+        }
+  **/
+ 
+  function handleLoginForm(e){
 
         e.preventDefault();
 
-        await loginAPICall(usernameOrPhone, password)
+        loginAPICall(usernameOrPhone, password)
           .then((response) => {
             console.log('Login response:' ,response.data);
 
