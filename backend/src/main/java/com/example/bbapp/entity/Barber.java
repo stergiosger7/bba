@@ -42,7 +42,7 @@ public class Barber {
     //cascade -> whenever save a barber, we save and its role (to child)
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "barber_role",
-            joinColumns = @JoinColumn(name = "barber_id", referencedColumnName = "barberId"),
-            inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "roleId"))
+            joinColumns = @JoinColumn(name = "barber_id", nullable = false),
+            inverseJoinColumns = @JoinColumn(name = "role_id", nullable = false))
     private Set<Role> roles;
 }
