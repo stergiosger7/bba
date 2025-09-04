@@ -243,7 +243,7 @@ const BarberDashboard = () => {
         )}
 
         {/* Appointments Dashboard Card */}
-        <Card className="shadow p-4">
+        <Card className="shadow p-4" style={{ maxWidth: '800px', width: '100%' }}>
           <Card.Body>
             <div className="d-flex justify-content-between align-items-center mb-4">
               <div>
