@@ -122,18 +122,4 @@ public class BarberServiceImpl implements BarberService {
                             .build());
             }
     }
-
-    /**
-    //add barber... WITH REGISTER
-    @Override
-    public BarberDto createBarber(BarberDto barberDto) {
-
-        //convert dto to entity
-        Barber barber = BarberMapper.toBarberEntity(barberDto);
-        barber.setPasswordHash("test");
-        Barber createdBarber = barberRepository.save(barber);
-
-        return BarberMapper.toBarberDto(createdBarber);
-    }
-    **/
 }
